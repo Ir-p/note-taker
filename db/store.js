@@ -1,29 +1,22 @@
 const fs = require('fs');
-const { get } = require('http');
-const util = require('util');
-const readFileAsync = util.promisify(fs.readFile);
-const writeFileAsync = util.promisify(fs.writeFile);
+const notesJSON = require("./db.json")
 
+// Store notes
 class Store {
     read() {
-        return readFileAsync('assets/db/db.json', "utf8")
+        return notesJSON;
     }
     
     write(note){
-        return writeFileAsync('assets/db/db.json', JSON.stringify(note))
+        const length = notesJSON.push(note);
+        return length -1;
     }
 
-getNotes(){
+    getNotes(){
     return this.read().then((notes) => {
         console.log(notes)
     })
-}
-
-
-
-
-
-
+    }
 }
 
 
