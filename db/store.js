@@ -6,11 +6,11 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 class Store {
     read() {
-        return readFileAsync('../Assets/Develop/db/db.json', "utf8")
+        return readFileAsync('assets/db/db.json', "utf8")
     }
     
     write(note){
-        return writeFileAsync('../Assets/Develop/db/db.json', JSON.stringify(note))
+        return writeFileAsync('assets/db/db.json', JSON.stringify(note))
     }
 
 getNotes(){

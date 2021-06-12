@@ -1,8 +1,8 @@
 // LOAD DATA
 // We are linking our routes to a series of "data" sources.
 
-const db = require('../db/db.json');
-const store = require('../db/store.js')
+const db = require('../assets/db/db.json');
+const store = require('../assets/db/store.js')
 // ROUTING
 
 
