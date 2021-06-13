@@ -12,6 +12,9 @@ app.use(express.urlencoded())
 // Serve static 
 app.use(express.static('public'));
 
+require('./routes/apiRoutes')(app);
+require('./routes/htmlRoutes')(app);
+
 // LISTENER
 app.listen(PORT, () => {
   console.log(`App listening on PORT: http://localhost:${PORT}`);

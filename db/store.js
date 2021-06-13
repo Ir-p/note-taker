@@ -1,5 +1,5 @@
 const fs = require('fs');
-const notesJSON = require("./db.json")
+const notesJSON = require("./db.json");
 
 // Store notes
 class Store {

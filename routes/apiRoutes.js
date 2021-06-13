@@ -10,7 +10,7 @@ module.exports = (app) => {
  
   //API ROUTES
   // Path to notes
-  app.get('../api/notes', (req, res) => {
+  app.get('/api/notes', (req, res) => {
     res.json(store.read())
   });
 
