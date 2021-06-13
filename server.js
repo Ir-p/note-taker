@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 // MIDDLEWARE
 app.use(express.json())
-app.use(express.urlencoded())
+app.use(express.urlencoded({ extended: true}))
 
 // Serve static 
 app.use(express.static('public'));
