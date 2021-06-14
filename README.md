@@ -4,7 +4,7 @@ This app uses an Express.js to write and save notes
 ## Getting Started
 
 * clone me, or fork me
-* 🌎 live at: [github pages] (https://ir-p.github.io/note-taker/)
+* 🌎 live at: [github pages] (http://localhost:3000/)
 
 * Screen shot of the deployed app: ![Screen Shot Of The Deployed App](assets/images/screenshot.jpg)
 
