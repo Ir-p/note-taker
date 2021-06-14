@@ -16,6 +16,7 @@ module.exports = (app) => {
 
   // Post API notes
   app.post("/api/notes", (req, res) => {
+    console.log("post api")
     const id = store.write(req.body)
     res.json(id);
   });
