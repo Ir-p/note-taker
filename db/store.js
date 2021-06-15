@@ -1,6 +1,6 @@
-const fs = require('fs');
 const notesJSON = require("./db.json");
-
+const { writeFileSync } = require('fs');
+const path = require("path");
 // Store notes
 class Store {
     read() {
@@ -9,15 +9,13 @@ class Store {
     
     write(note){
         const length = notesJSON.push(note);
+        
+        writeFileSync(path.join(__dirname, "db.json"), JSON.stringify(notesJSON));
         return length -1;
     }
 
-    getNotes(){
-    return this.read().then((notes) => {
-        console.log(notes)
-    })
-    }
 }
+
 
 
 module.exports = new Store();
