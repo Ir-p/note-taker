@@ -11,6 +11,9 @@ const { v4: uuidv4 } = require('uuid');
 module.exports = (app) => {
  
   //API ROUTES
+  app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+
+  
   // Path to notes
   app.get('/api/notes', (req, res) => {
     store.getNotes().then((notes) =>{
