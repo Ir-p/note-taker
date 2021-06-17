@@ -3,6 +3,8 @@
 
 const notesJSON = require('../db/db.json');
 const store = require('../db/store.js')
+const { v4: uuidv4 } = require('uuid');
+
 // ROUTING
 
 
@@ -11,13 +13,21 @@ module.exports = (app) => {
   //API ROUTES
   // Path to notes
   app.get('/api/notes', (req, res) => {
-    res.json(store.read())
+    store.getNotes().then((notes) =>{
+      return res.json(notes)
+    }).catch((error)=>res.status(500).json(error)
+    )
   });
 
   // Post API notes
   app.post("/api/notes", (req, res) => {
-    const id = store.write(req.body)
-    res.json(id);
+    store.addNote(req.body).then((note) => res.json(note)).catch((error)=>res.status(500).json(error)
+    );
   });
 
+  // DELETE
+  app.delete("/api/notes/:id", (req, res) => {
+    store.deleteNote(req.params.id).then(() => res.json({ok: true})).catch((error)=>res.status(500).json(error)
+    );
+  });
 }
