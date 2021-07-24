@@ -15,8 +15,8 @@ This app uses an Express.js to write and save notes
 ## Build With 
 
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-* [Express](https://www.npmjs.com/package/express)
-* 
+* [db-json](https://www.npmjs.com/package/db-json)
+  
 
 ## Acknowledgements
 * **Billie Thompson** - *README template* - [PurpleBooth](https://github.com/PurpleBooth))
