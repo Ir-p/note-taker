@@ -4,7 +4,7 @@ This app uses an Express.js to write and save notes
 ## Getting Started
 
 * clone me, or fork me
-* 🌎 live at: [github pages] (https://desolate-fjord-95204.herokuapp.com/)
+* 🌎 live at: [heroku](https://note-taker-6068.herokuapp.com/)
 
 * Screen shot of the deployed app: ![Screen Shot Of The Deployed App Page 1](public/assets/images/screenshot1.png)
 * ![Screen Shot Of The Deployed App Page 2](public/assets/images/screenshot2.png)
@@ -14,7 +14,9 @@ This app uses an Express.js to write and save notes
 
 ## Build With 
 
-* [express] (https://www.npmjs.com/package/express) - express
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [Express](https://www.npmjs.com/package/express)
+* 
 
 ## Acknowledgements
 * **Billie Thompson** - *README template* - [PurpleBooth](https://github.com/PurpleBooth))
